@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import NavBar from "../components/Navbar.astro"
+import Footer from "../components/Footer.astro"
+import LatestBlogs from "../components/tsx/LatestBlogs"
+---
+
+<Layout title="Blogs">
+	<NavBar/>
+		<div class="flex w-full justify-center pt-12">
+			<div class="max-w-screen-md w-full px-4 md:px-8">
+				<div class="w-full sm:px-16 md:px-32">
+					<h1 class="text-5xl font-semibold w-full text-center mt-5">rayy<span class="text-violet-600">.dev</span><span class="text-2xl text-gray-400">/blogs</span></h1>
+					<h1 class="w-full text-center text-2xl font-medium mt-10">
+						Where logic meets creativity: <br />
+						Unraveling the mysteries of code and technology.
+					</h1>
+					<p class="mt-10 text-center text-gray-500">Unleashing creativity in the world of technology and igniting innovation in the digital realm.</p>
+				</div>
+			<LatestBlogs client:load/>
+			</div>
+		</div>
+    <Footer/>
+</Layout>

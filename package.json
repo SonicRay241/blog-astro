@@ -1,0 +1,42 @@
+{
+  "name": "blog-astro",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "dev verbose": "astro dev --verbose",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.5.9",
+    "@astrojs/react": "^3.1.0",
+    "@astrojs/tailwind": "^5.1.0",
+    "@fontsource/inter": "^5.0.17",
+    "@mdxeditor/editor": "^2.15.1",
+    "@types/js-cookie": "^3.0.6",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@types/react-syntax-highlighter": "^15.5.11",
+    "astro": "^4.5.5",
+    "base64-arraybuffer": "^1.0.2",
+    "browser-image-compression": "^2.0.2",
+    "js-cookie": "^3.0.5",
+    "lexical": "^0.13.1",
+    "prismjs": "^1.29.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.1",
+    "react-markdown": "^9.0.1",
+    "react-syntax-highlighter": "^15.5.0",
+    "react-textarea-autosize": "^8.5.3",
+    "remark-gfm": "^4.0.0",
+    "swr": "^2.2.5",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.4.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.10"
+  }
+}

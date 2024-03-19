@@ -1,0 +1,49 @@
+---
+import ExternalUrl from "./ExternalUrl.astro"
+
+const contacts: { title: string, url: string }[] = [
+        {
+            title: "Github",
+            url: "https://github.com/SonicRay241/blog"
+        },
+        {
+            title: "Portfolio",
+            url: "https://rayy.dev"
+        }
+    ]
+---
+
+<div class="bg-white py-12 px-8 h-54 border-t border-gray-200">
+    <div 
+        class=""
+    >     
+        <h1 class="text-5xl font-semibold w-fit h-fit text-center mb-3">rayy<span class="text-violet-600">.dev</span><span class="text-2xl text-gray-400">/blogs</span></h1>
+    </div>
+    <div class="flex flex-col md:flex-row gap-8 md:gap-0">
+        <div class="w-full">
+            <div 
+                class="flex flex-wrap gap-2 w-fit"
+            >
+                <h2 class="text-base">Made with</h2>
+                <a 
+                    class="h-4 w-4 hover:cursor-pointer"
+                    href="https://astro.build/"
+                    target="_blank"
+                >
+                    <img src="/astrojs.svg" alt="AstroJS Icon" class="" loading="lazy"/>
+                </a>
+                <h2 class="text-base">in Jakarta, Indonesia.</h2>
+            </div>
+        </div>
+        <div class="flex w-full gap-5 justify-start md:justify-end flex-wrap">
+            {contacts.map((c)=>{
+                return (
+                    <ExternalUrl
+                        title={c.title}
+                        url={c.url}
+                    />
+                )
+            })}
+        </div>
+    </div>
+</div>

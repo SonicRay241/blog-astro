@@ -1,0 +1,9 @@
+---
+import Layout from "./Layout.astro"
+import ToasterWrapper from "../components/tsx/ToasterWrapper"
+---
+
+<Layout title="Editor">
+    <ToasterWrapper client:load/>
+    <slot/>
+</Layout>

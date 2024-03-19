@@ -1,0 +1,11 @@
+---
+import LoginNavbar from "../../../components/LoginNavbar.astro";
+import Layout from "../../../layouts/Layout.astro";
+import LoginForm from "../../../components/tsx/LoginForm"
+---
+<Layout title="Log in to use the editor.">
+    <LoginNavbar/>
+    <div class="flex w-full h-[75vh] justify-center items-center px-4 md:px-8">
+        <LoginForm client:load/>
+    </div>
+</Layout>

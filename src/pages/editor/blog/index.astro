@@ -1,0 +1,13 @@
+---
+import EditorLayout from "../../../layouts/EditorLayout.astro"
+import EditorNavbar from "../../../components/tsx/EditorNavbar"
+import BackButton from "../../../components/BackButton.astro"
+import Editor from "../../../components/tsx/Editor"
+import "@mdxeditor/editor/style.css"
+---
+
+<EditorLayout>
+    <EditorNavbar client:load fixed/>
+    <BackButton/>
+    <Editor client:load/>
+</EditorLayout>
