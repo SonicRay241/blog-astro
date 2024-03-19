@@ -27,6 +27,8 @@ const LoginForm = () => {
         })
         .then(async (e) => {
             const res = await e.text()
+            console.log(e.text);
+            
             if (res == "Invalid Credentials" || res == "Failed to create session") {
                 toast.error(res)
                 if (res == "Invalid Credentials") {
