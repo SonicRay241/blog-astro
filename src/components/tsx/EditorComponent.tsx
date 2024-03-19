@@ -39,7 +39,7 @@ type EditorProps = {
 
 const FallbackCodeEditorDescriptor: CodeBlockEditorDescriptor = {
     // always use the editor, no matter the language or the meta of the code block
-    match: (language, meta) => true,
+    match: () => true,
     // You can have multiple editors with different priorities, so that there's a "catch-all" editor (with the lowest priority)
     priority: 0,
     // The Editor is a React component
@@ -47,12 +47,12 @@ const FallbackCodeEditorDescriptor: CodeBlockEditorDescriptor = {
 }
 
 const imageHandler: ImageUploadHandler = async (image) => {
-    return new Promise<string>(async (resolve, reject) => {
-        const compressOptions = {
-            maxSizeMB: 0.3,
-            maxWidthOrHeight: 1920,
-            useWebWorker: true,
-        } as const
+    const compressOptions = {
+        maxSizeMB: 0.3,
+        maxWidthOrHeight: 1920,
+        useWebWorker: true,
+    } as const
+    return new Promise<string>(async (resolve) => {
         const compressedImage = await imageCompression(image, compressOptions)
         const imageBuffer = await compressedImage.arrayBuffer()
         const b64 = encode(imageBuffer)

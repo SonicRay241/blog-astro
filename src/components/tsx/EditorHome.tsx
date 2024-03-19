@@ -10,10 +10,6 @@ const EditorHome = () => {
     const [currentPage, setCurrentPage] = useState(1)
     const [blogCount, setBlogCount] = useState<number | null>(null)
     const [isLoading, setIsLoading] = useState(true)
-    const [accountData, setAccountData] = useState<{
-        name: string,
-        username: string,
-    } | null>(null)
     const [blogsData, setBlogsData] = useState<{
         created_at: string;
         hidden: boolean;
@@ -55,10 +51,8 @@ const EditorHome = () => {
     }
 
     useEffect(() => {
-        if (!accountData && !isError) {
-            if (cookieValue) {
-                getBlogs()
-            }
+        if (!isError && cookieValue) {
+            getBlogs()
         }
     }, [cookieValue])
 

@@ -41,7 +41,7 @@ const NewModal: FC<{
 
                 setButtonDisabled(false)
             })
-            .catch(async (e) => {
+            .catch(async () => {
                 toast.error("Something went wrong...")
                 setButtonDisabled(false)
             })

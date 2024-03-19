@@ -1,9 +1,9 @@
 import remarkGfm from 'remark-gfm';
 import theme from 'react-syntax-highlighter/dist/cjs/styles/prism/one-dark';
-import { type FC, useEffect, useState, lazy, Suspense, type ReactNode } from "react"
+import { type FC, useEffect, useState, lazy, Suspense } from "react"
 import Skeleton from "../../components/tsx/Skeleton.tsx"
 import { url } from "../../lib/url.ts";
-import useSWR, { preload } from "swr";
+import useSWR from "swr";
 import { fetcherJSON } from "../../lib/fetchers";
 import type { Options } from 'react-markdown';
 import { useSearchParams } from '../../lib/hooks.ts';

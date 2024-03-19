@@ -60,7 +60,7 @@ const LoginForm = () => {
                     if (window) window.location.replace("/editor")
                 }
             })
-            .catch((e) => {
+            .catch(() => {
                 setIsError(true)
             })
         }
