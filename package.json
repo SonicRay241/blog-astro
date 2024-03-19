@@ -19,6 +19,7 @@
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@types/react-syntax-highlighter": "^15.5.11",
+    "@types/react-textarea-autosize": "^8.0.0",
     "astro": "^4.5.5",
     "base64-arraybuffer": "^1.0.2",
     "browser-image-compression": "^2.0.2",

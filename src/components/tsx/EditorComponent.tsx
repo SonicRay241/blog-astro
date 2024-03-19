@@ -79,7 +79,8 @@ const EditorComponent: FC<EditorProps & { setState?: (s: string) => void, enable
             suppressHtmlProcessing={false}
             placeholder="Type markdown here..."
             readOnly={props.readOnly}
-            contentEditableClassName="prose prose-base md:prose-lg prose-pre:bg-transparent prose-code:bg-transparent prose-pre:p-0 max-w-none w-full prose-img:mx-auto prose-img:rounded-md prose-img:border prose-img:border-gray-200 prose-pre:no-scrollbar prose-code:no-scrollbar pb-96"
+            className="pb-32"
+            contentEditableClassName="prose prose-base md:prose-lg prose-pre:bg-transparent prose-code:bg-transparent prose-pre:p-0 max-w-none w-full prose-img:mx-auto prose-img:rounded-md prose-img:border prose-img:border-gray-200 prose-pre:no-scrollbar prose-code:no-scrollbar"
             plugins={[
                 headingsPlugin({ allowedHeadingLevels: [1, 2, 3, 4, 5, 6] }),
                 listsPlugin(),

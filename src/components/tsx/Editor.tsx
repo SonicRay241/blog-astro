@@ -6,6 +6,7 @@ import { url } from "../../lib/url"
 import SaveButton from "./SaveButton"
 import ArchivePublishButton from "./ArchivePublishButton"
 import DeleteButton from "./DeleteButton"
+import "@mdxeditor/editor/style.css"
 
 const EditorComponent = lazy(() => import("./EditorComponent"))
 
@@ -63,7 +64,7 @@ const Editor = () => {
                     }
                 </div>
                 :
-                <div className="flex w-full justify-center pt-20">
+                <div className="flex w-full h-fit justify-center pt-20">
                     <div className="w-full max-w-screen-lg md:px-4">
                         <p className={`${blogTitle == "" ? "opacity-100" : "opacity-0"} text-red-500`}>
                             Title must not be empty.
