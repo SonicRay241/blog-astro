@@ -58,7 +58,7 @@ export function useAccount(
     const [isError, setIsError] = useState(false)
 
     useEffect(() => {
-        if (!options.isLoading)
+        if (!options.isLoading || token != "")
         fetch(`${url}/v2/auth/session-user/`, {
             method: "POST",
             headers: { 'Content-Type': 'application/json' },
