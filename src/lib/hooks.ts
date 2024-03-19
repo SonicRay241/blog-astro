@@ -17,7 +17,7 @@ export function useSearchParams() {
 }
 
 export function useCookie(name: string) {
-    const [value, setValue] = useState<string | null>(null)
+    const [value, setValue] = useState<string | null>("")
     const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
