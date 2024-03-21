@@ -3,10 +3,12 @@ import Navbar from "../../components/Navbar.astro"
 import Footer from "../../components/Footer.astro"
 import Layout from '../../layouts/Layout.astro';
 import BlogPage from "../../components/tsx/BlogPage"
+import Recommend from "../../components/Recommend.astro"
 ---
 
 <Layout title="Blog">
     <Navbar/>
-        <BlogPage client:load/>
+    <BlogPage client:load/>
+    <Recommend/>
     <Footer/>
 </Layout>

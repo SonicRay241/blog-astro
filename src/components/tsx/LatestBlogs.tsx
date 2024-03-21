@@ -34,7 +34,7 @@ const LatestBlogs = () => {
           :
           [...Array(6)].map((_, n)=>{
             return (
-              <Skeleton width={"full"} height={84} key={n}/>
+              <Skeleton width={"full"} height={96} key={n}/>
             )
           })
         }

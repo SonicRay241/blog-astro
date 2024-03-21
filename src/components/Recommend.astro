@@ -1,0 +1,11 @@
+---
+import NextBlog from "../components/tsx/NextBlog"
+import PrevBlog from "../components/tsx/PrevBlog"
+---
+
+<div class="flex w-full justify-center pb-12">
+    <div class="flex w-full max-w-screen-lg px-4 flex-col md:flex-row sm:px-8 gap-6">
+        <PrevBlog client:visible/>
+        <NextBlog client:visible/>
+    </div>
+</div>
