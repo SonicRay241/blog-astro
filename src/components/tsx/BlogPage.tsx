@@ -7,6 +7,7 @@ import useSWR from "swr";
 import { fetcherJSON } from "../../lib/fetchers";
 import type { Options } from 'react-markdown';
 import { useSearchParams } from '../../lib/hooks.ts';
+import { Helmet } from 'react-helmet';
 
 const LazyMarkdown = lazy(() => import("react-markdown"))
 
@@ -127,6 +128,12 @@ const BlogPage = () => {
     if (!isError)
         return (
             <>
+                {contentData && metadata && 
+                    <Helmet>
+                        <title>{metadata.title}</title>
+                        <meta name="description" content={contentData.content} />
+                    </Helmet>
+                }
                 <div className="w-full flex flex-col items-center pb-20">
                     {
                         metadata &&
@@ -138,7 +145,6 @@ const BlogPage = () => {
                     <div className="w-full max-w-screen-lg text-neutral-900 px-4 sm:px-8">
                         <div className="flex w-full justify-center pt-12">
                             <div className="prose prose-base md:prose-lg prose-pre:bg-transparent prose-code:bg-transparent prose-pre:p-0 max-w-none w-full prose-img:mx-auto prose-img:rounded-md prose-img:border prose-img:border-gray-200 prose-pre:no-scrollbar prose-code:no-scrollbar">
-
                                 {metadata ?
                                     <>
                                         <h1 className="text-4xl sm:text-5xl md:text-6xl text-violet-600 mb-4 md:mb-8 p-0 leading-none">{metadata.title}</h1>
